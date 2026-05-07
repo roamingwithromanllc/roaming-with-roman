@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap");
+@import "tailwindcss";
+
+/* ─── CSS Custom Properties ─────────────────────────────────── */
+:root {
+  /* Spring water palette */
+  --color-deep-forest:    #071510;
+  --color-spring-dark:    #0e3d34;
+  --color-spring-mid:     #126354;
+  --color-spring-teal:    #1e8f80;
+  --color-spring-bright:  #35c9b3;
+  --color-crystal:        #85eedd;
+
+  /* Sunset / golden palette */
+  --color-sunset-deep:    #8b3a0a;
+  --color-sunset-gold:    #e8920a;
+  --color-gold:           #f0b429;
+  --color-amber:          #ffd27a;
+  --color-dawn:           #fff0cc;
+
+  /* Forest greens */
+  --color-forest-dark:    #0e2417;
+  --color-forest-mid:     #1d5c34;
+  --color-leaf:           #3a8c55;
+
+  /* Neutrals */
+  --color-cream:          #ffffff;
+  --color-sand:           #e8e0cc;
+  --color-stone:          #c4b89a;
+  --color-bark:           #3d2e1e;
+
+  /* Fonts */
+  --font-heading:  'Cinzel', Georgia, serif;
+  --font-sub:      'Raleway', system-ui, sans-serif;
+  --font-body:     'Lato', system-ui, sans-serif;
+}
+
+/* ─── Base ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #071510;
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-weight: 500;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+
+/* ─── Typography ────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.8rem); font-weight: 600; }
+h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 600; }
+
+p { font-family: var(--font-body); }
+
+/* ─── Section Utilities ─────────────────────────────────────── */
+.section-pad {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad { padding: 7rem 2rem; }
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--color-gold);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.95);
+}
+
+.section-subtitle {
+  font-family: var(--font-sub);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: var(--color-crystal);
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+}
+
+.gold-divider {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-sunset-gold), var(--color-gold), var(--color-amber));
+  border-radius: 2px;
+  margin: 1rem auto 2.5rem;
+}
+
+/* ─── Buttons ───────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  background: linear-gradient(135deg, var(--color-sunset-gold) 0%, var(--color-gold) 100%);
+  color: var(--color-deep-forest);
+  font-family: var(--font-sub);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(240,180,41,0.3), 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-amber) 100%);
+  box-shadow: 0 6px 28px rgba(240,180,41,0.45), 0 3px 12px rgba(0,0,0,0.5);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.82rem 2rem;
+  background: transparent;
+  color: var(--color-crystal);
+  font-family: var(--font-sub);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 2px solid var(--color-spring-bright);
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(42,181,160,0.15);
+  border-color: var(--color-crystal);
+  color: var(--color-crystal);
+  transform: translateY(-2px);
+}
+
+/* ─── Cards ─────────────────────────────────────────────────── */
+.nature-card {
+  background: linear-gradient(160deg, rgba(13,74,64,0.55) 0%, rgba(10,46,40,0.65) 100%);
+  border: 1px solid rgba(42,181,160,0.25);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.nature-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-spring-bright), var(--color-gold));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nature-card:hover {
+  border-color: rgba(42,181,160,0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 30px rgba(42,181,160,0.1);
+}
+
+.nature-card:hover::before { opacity: 1; }
+
+/* ─── Location Cards ─────────────────────────────────────────── */
+.location-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(10,46,40,0.45);
+  border: 1px solid rgba(42,181,160,0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* ─── Inputs ─────────────────────────────────────────────────── */
+.spring-input {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: rgba(10,46,40,0.45);
+  border: 1px solid rgba(42,181,160,0.3);
+  border-radius: 6px;
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.spring-input::placeholder { color: var(--color-stone); }
+
+.spring-input:focus {
+  border-color: var(--color-spring-bright);
+  box-shadow: 0 0 0 3px rgba(42,181,160,0.15);
+}
+
+.spring-label {
+  display: block;
+  font-family: var(--font-sub);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-crystal);
+  margin-bottom: 0.4rem;
+}
+
+/* ─── Wildlife Badges ────────────────────────────────────────── */
+.wildlife-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  background: transparent;
+  border: 1px solid rgba(42,181,160,0.15);
+  border-radius: 12px;
+  padding: 1.25rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.wildlife-badge:hover {
+  border-color: rgba(42,181,160,0.4);
+}
+
+.wildlife-icon {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(42,181,160,0.2) 0%, rgba(10,46,40,0.8) 100%);
+  border: 2px solid rgba(42,181,160,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.wildlife-badge:hover .wildlife-icon {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 20px rgba(240,180,41,0.3);
+  transform: scale(1.1);
+}
+
+/* ─── Nav ────────────────────────────────────────────────────── */
+.nav-link {
+  font-family: var(--font-sub);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-sand);
+  text-decoration: none;
+  padding: 0.3rem 0;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--color-spring-bright);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover { color: var(--color-crystal); }
+.nav-link:hover::after { width: 100%; }
+
+/* ─── Social Strip ───────────────────────────────────────────── */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--color-stone);
+  font-family: var(--font-sub);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: var(--color-crystal);
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(10,46,40,0.7);
+  border: 1px solid rgba(42,181,160,0.25);
+  color: var(--color-spring-bright);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.social-link:hover .social-icon {
+  background: rgba(42,181,160,0.15);
+  border-color: var(--color-spring-bright);
+  box-shadow: 0 0 16px rgba(42,181,160,0.2);
+  transform: translateY(-2px);
+}
+
+.social-label {
+  letter-spacing: 0.04em;
+}
+
+/* ─── Call Banner ────────────────────────────────────────────── */
+.call-banner-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: var(--color-cream);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.7);
+  transition: color 0.2s;
+}
+.call-banner-number:hover { color: var(--color-spring-bright); }
+
+/* ─── Footer Link ────────────────────────────────────────────── */
+.footer-link {
+  font-family: var(--font-sub);
+  color: var(--color-stone);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--color-spring-bright);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-spring-dark); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-spring-teal);
+  border-radius: 3px;
+}
+
+::selection {
+  background: rgba(42,181,160,0.35);
+  color: var(--color-dawn);
+}
