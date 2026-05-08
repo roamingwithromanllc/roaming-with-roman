@@ -14,7 +14,7 @@ const locations = [
   },
   {
     name: "Silver Springs",
-    photo: "/assets/gallery/group-kayak-tour.jpeg",
+    photo: "/assets/gallery/alligator-bank.jpeg",
     subtitle: "Silver Springs State Park — Ocala, FL",
     description:
       "Discover why Silver Springs State Park is known as the #1 destination for wildlife kayaking in Florida. Located in Silver Springs, FL, this world-famous spring offers the best kayak tours for wildlife viewing, with unmatched opportunities to see manatees, wild monkeys, alligators, turtles, and native birds in crystal-clear water.\n\nOur guided wildlife eco tours in Silver Springs are perfect for visitors searching for manatee kayak tours in Florida, kayaking with monkeys, and top-rated outdoor adventures near Ocala and Central Florida. We also offer kayak rentals, canoe rentals, and stand-up paddleboard (SUP) rentals in Silver Springs, making it easy to explore one of the most biodiverse waterways in the state at your own pace.\n\nWhether you're looking for the best kayaking in Florida springs, wildlife tours near Ocala, or family-friendly paddleboard rentals in Silver Springs, this is the ultimate destination for nature lovers. Paddle through calm, spring-fed waters and experience Florida wildlife up close in one of the most iconic and scenic kayaking locations in the country.",
