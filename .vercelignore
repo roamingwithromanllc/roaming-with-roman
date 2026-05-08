@@ -1,0 +1,3 @@
+# Large video files — host these on a CDN (e.g. Cloudinary) and reference by URL
+public/assets/*.mp4
+public/assets/*.mov

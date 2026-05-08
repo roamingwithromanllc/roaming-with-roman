@@ -28,7 +28,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col">
-        {/* Full-page scrolling video background */}
+        {/* Fallback gradient shown before/if video loads */}
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "linear-gradient(160deg, #041a15 0%, #0a2e28 40%, #071510 100%)",
+            zIndex: -3,
+          }}
+        />
+        {/* Full-page video background */}
         <video
           autoPlay
           loop
