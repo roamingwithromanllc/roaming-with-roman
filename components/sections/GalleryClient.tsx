@@ -3,6 +3,18 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 
+function useTouchSwipe(onSwipeLeft: () => void, onSwipeRight: () => void) {
+  const startX = useRef<number | null>(null);
+  const onTouchStart = (e: React.TouchEvent) => { startX.current = e.touches[0]?.clientX ?? null; };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (startX.current === null) return;
+    const delta = (e.changedTouches[0]?.clientX ?? 0) - startX.current;
+    if (Math.abs(delta) > 40) delta < 0 ? onSwipeLeft() : onSwipeRight();
+    startX.current = null;
+  };
+  return { onTouchStart, onTouchEnd };
+}
+
 const photos = [
   { src: "/assets/gallery/group-kayak-tour.jpeg",        label: "Group Kayak Tour" },
   { src: "/assets/gallery/anhinga-wings.jpeg",            label: "Anhinga Spreading Wings" },
@@ -62,13 +74,15 @@ export default function GalleryClient() {
   }, [lightbox]);
 
   const current = photos[slideIndex];
+  const swipe = useTouchSwipe(next, prev);
 
   return (
     <>
       {/* ── Slideshow ─────────────────────────────────────────── */}
       <div
         className="relative w-full rounded-2xl overflow-hidden"
-        style={{ height: "520px", border: "1px solid rgba(42,181,160,0.2)" }}
+        style={{ height: "clamp(280px, 55vw, 520px)", border: "1px solid rgba(42,181,160,0.2)" }}
+        {...swipe}
       >
         {/* Clickable image */}
         <button

@@ -1,5 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Roaming with Roman | Florida Springs Kayak & Eco Tours",
@@ -35,7 +40,7 @@ export default function RootLayout({
             left: 0,
             width: "100%",
             height: "100%",
-            objectFit: "contain",
+            objectFit: "cover",
             objectPosition: "center",
             zIndex: -2,
           }}

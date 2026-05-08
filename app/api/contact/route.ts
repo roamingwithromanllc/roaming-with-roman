@@ -31,9 +31,10 @@ export async function POST(req: NextRequest) {
     "unknown";
   const { allowed: ok, retryAfter } = checkRateLimit(ip);
   if (!ok) {
-    return json({ error: "Too many requests. Please wait and try again." }, 429, );
+    const res = json({ error: "Too many requests. Please wait and try again." }, 429);
+    res.headers.set("Retry-After", String(retryAfter));
+    return res;
   }
-  void retryAfter;
 
   // 4. Parse JSON
   let raw: unknown;
