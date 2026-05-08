@@ -54,7 +54,7 @@ export default function RootLayout({
             zIndex: -2,
           }}
         >
-          <source src="/assets/background-new.mp4" type="video/mp4" />
+          <source src="/assets/background-compressed.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay to improve text legibility over the video */}
         <div

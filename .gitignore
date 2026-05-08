@@ -40,6 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# large video files — host separately via Vercel Blob or CDN
-public/assets/*.mp4
-public/assets/*.mov
+# large video files — originals excluded, compressed version committed
+public/assets/background-new.mp4
+public/assets/background.mov
+public/assets/springs-video.mov

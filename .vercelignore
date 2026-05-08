@@ -1,3 +1,4 @@
-# Large video files — host these on a CDN (e.g. Cloudinary) and reference by URL
-public/assets/*.mp4
-public/assets/*.mov
+# Original oversized video files
+public/assets/background-new.mp4
+public/assets/background.mov
+public/assets/springs-video.mov
