@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-16">
 
         {/* Three columns — all top-aligned, consistent heading style */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12">
 
           {/* Quick Links */}
           <div className="flex flex-col" style={{ background: "rgba(10,46,40,0.45)", border: "1px solid rgba(42,181,160,0.2)", borderRadius: "12px", padding: "1.75rem", backdropFilter: "blur(6px)" }}>

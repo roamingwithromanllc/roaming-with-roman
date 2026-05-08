@@ -94,7 +94,7 @@ export default function Experiences() {
         <span className="gold-divider" />
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
           {experiences.map((exp) => (
             <div key={exp.title} className="nature-card flex flex-col" style={{ padding: 0, overflow: "hidden" }}>
               {/* Photo header */}

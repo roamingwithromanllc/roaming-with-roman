@@ -120,7 +120,7 @@ export default function Wildlife() {
           <h2 className="section-title">Florida Wildlife</h2>
           <span className="gold-divider" />
 
-          <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
             {wildlife.map((animal) => (
               <div key={animal.name} className="wildlife-badge group cursor-default">
                 <div className="wildlife-icon">
@@ -128,13 +128,13 @@ export default function Wildlife() {
                 </div>
                 <h4
                   className="font-semibold text-center leading-tight"
-                  style={{ fontFamily: "var(--font-heading)", color: "var(--color-crystal)", textShadow: "0 1px 6px rgba(0,0,0,0.9)", fontSize: "1.15rem" }}
+                  style={{ fontFamily: "var(--font-heading)", color: "var(--color-crystal)", textShadow: "0 1px 6px rgba(0,0,0,0.9)", fontSize: "clamp(0.85rem, 2vw, 1.15rem)" }}
                 >
                   {animal.name}
                 </h4>
                 <p
-                  className="text-center leading-relaxed"
-                  style={{ color: "var(--color-sand)", fontFamily: "var(--font-sub)", textShadow: "0 1px 4px rgba(0,0,0,0.9)", fontSize: "1rem" }}
+                  className="text-center leading-relaxed hidden sm:block"
+                  style={{ color: "var(--color-sand)", fontFamily: "var(--font-sub)", textShadow: "0 1px 4px rgba(0,0,0,0.9)", fontSize: "0.9rem" }}
                 >
                   {animal.description}
                 </p>

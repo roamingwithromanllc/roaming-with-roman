@@ -7,10 +7,33 @@ export default function VideoBackground() {
   useEffect(() => {
     const v = ref.current;
     if (!v) return;
-    v.muted = true; // React doesn't reliably set the muted attribute — do it via DOM
-    v.play().catch(() => {
-      // Autoplay blocked (e.g. data-saver mode) — gradient fallback is visible beneath
-    });
+
+    // Set every required attribute directly on the DOM element.
+    // React's JSX props alone are not enough for iOS Safari autoplay.
+    v.setAttribute("muted", "");
+    v.setAttribute("playsinline", "");
+    v.setAttribute("webkit-playsinline", ""); // required on older iOS
+    v.setAttribute("x-webkit-airplay", "allow");
+    v.muted = true;
+    v.loop = true;
+
+    const play = () => { v.play().catch(() => {}); };
+
+    // canplay fires once the browser has buffered enough to start
+    v.addEventListener("canplay", play, { once: true });
+
+    // Force the browser to re-read the element with the new attributes
+    v.load();
+
+    // Retry on first user gesture — some Android browsers gate autoplay
+    // behind an interaction even when the video is muted
+    document.addEventListener("touchstart", play, { once: true, passive: true });
+    document.addEventListener("click",      play, { once: true });
+
+    return () => {
+      document.removeEventListener("touchstart", play);
+      document.removeEventListener("click",      play);
+    };
   }, []);
 
   return (
