@@ -6,7 +6,7 @@ export default function Hero() {
     >
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto" style={{ paddingTop: "5rem" }}>
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto w-full" style={{ paddingTop: "4.5rem" }}>
         {/* Main heading */}
         <h1
           className="mb-6"
@@ -27,16 +27,16 @@ export default function Hero() {
         <span className="gold-divider" />
 
         {/* CTAs */}
-        <div className="mt-10 flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center w-full px-2">
           <a
             href="https://fareharbor.com/embeds/book/roamingwithroman/items/all/?full-items=yes"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary text-xl px-12 py-5"
+            className="btn-primary w-full sm:w-auto text-base sm:text-xl px-8 sm:px-12 py-4 sm:py-5 justify-center"
           >
             Book a Tour
           </a>
-          <a href="#experiences" className="btn-outline text-xl px-12 py-5">
+          <a href="#experiences" className="btn-outline w-full sm:w-auto text-base sm:text-xl px-8 sm:px-12 py-4 sm:py-5 justify-center">
             Explore Experiences ↓
           </a>
         </div>

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import VideoBackground from "@/components/layout/VideoBackground";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -37,25 +38,7 @@ export default function RootLayout({
             zIndex: -3,
           }}
         />
-        {/* Full-page video background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-            zIndex: -2,
-          }}
-        >
-          <source src="/assets/background-compressed.mp4" type="video/mp4" />
-        </video>
+        <VideoBackground />
         {/* Dark overlay to improve text legibility over the video */}
         <div
           style={{

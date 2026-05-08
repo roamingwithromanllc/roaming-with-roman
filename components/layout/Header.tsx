@@ -33,10 +33,10 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBg}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-16 sm:h-24">
           {/* Logo + Brand */}
           <Link href="#home" className="flex items-center gap-3 group">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#2ab5a0]/50 group-hover:border-[#f0b429]/70 transition-colors shadow-lg">
+            <div className="relative w-12 h-12 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-[#2ab5a0]/50 group-hover:border-[#f0b429]/70 transition-colors shadow-lg">
               <Image
                 src="/assets/logo.png"
                 alt="Roaming with Roman"
@@ -49,12 +49,12 @@ export default function Header() {
             <div>
               <span
                 className="block text-[#f0b429] leading-tight"
-                style={{ fontFamily: "var(--font-heading)", fontSize: "0.95rem", letterSpacing: "0.08em" }}
+                style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)", letterSpacing: "0.08em" }}
               >
                 Roaming with Roman
               </span>
               <span
-                className="block text-[#5dd8c8] leading-tight"
+                className="hidden sm:block text-[#5dd8c8] leading-tight"
                 style={{ fontFamily: "var(--font-sub)", fontSize: "0.65rem", letterSpacing: "0.18em", textTransform: "uppercase" }}
               >
                 Florida Springs Eco Tours

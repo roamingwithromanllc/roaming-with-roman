@@ -120,7 +120,7 @@ export default function Wildlife() {
           <h2 className="section-title">Florida Wildlife</h2>
           <span className="gold-divider" />
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
+          <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
             {wildlife.map((animal) => (
               <div key={animal.name} className="wildlife-badge group cursor-default">
                 <div className="wildlife-icon">
