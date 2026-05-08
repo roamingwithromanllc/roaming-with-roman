@@ -18,6 +18,22 @@ export const metadata: Metadata = {
     description:
       "Explore Florida's crystal-clear springs with expert guided eco tours, kayak rentals, and canoe adventures.",
     type: "website",
+    url: "https://roamingwithromanllc.com",
+    images: [
+      {
+        url: "https://roamingwithromanllc.com/assets/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Guided kayak eco tour on Florida's crystal-clear spring-fed river",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roaming with Roman | Florida Springs Kayak & Eco Tours",
+    description:
+      "Explore Florida's crystal-clear springs with expert guided eco tours, kayak rentals, and canoe adventures.",
+    images: ["https://roamingwithromanllc.com/assets/og-image.jpg"],
   },
 };
 
