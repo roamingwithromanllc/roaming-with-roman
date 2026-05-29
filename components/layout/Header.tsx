@@ -73,7 +73,7 @@ export default function Header() {
 
           {/* Book Now CTA */}
           <a
-            href="#booking"
+            href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
             className="btn-primary hidden lg:inline-flex text-sm px-5 py-2.5"
           >
             Book Now
@@ -116,7 +116,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#booking"
+              href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
               className="btn-primary self-start mt-2"
               onClick={() => setOpen(false)}
             >

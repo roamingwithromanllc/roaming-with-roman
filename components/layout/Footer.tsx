@@ -59,7 +59,7 @@ export default function Footer() {
               </li>
               <li className="mt-2">
                 <a
-                  href="#booking"
+                  href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
                   className="btn-primary text-sm px-4 py-2"
                 >
                   Book a Tour
