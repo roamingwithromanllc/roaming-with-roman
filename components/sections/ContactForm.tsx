@@ -83,9 +83,7 @@ export default function ContactForm() {
           Thanks for reaching out! Roman will get back to you within 24 hours.
           In the meantime, you can{" "}
           <a
-            href="https://fareharbor.com/embeds/book/roamingwithromanllc/items/734583/?full-items=yes&flow=1645007"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#booking"
             style={{ color: "var(--color-spring-bright)" }}
             className="hover:underline"
           >

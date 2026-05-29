@@ -93,9 +93,7 @@ export default function About() {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <a
-                href="https://fareharbor.com/embeds/book/roamingwithromanllc/items/734583/?full-items=yes&flow=1645007"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#booking"
                 className="btn-primary"
               >
                 Book with Roman

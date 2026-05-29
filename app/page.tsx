@@ -8,6 +8,7 @@ import About from "@/components/sections/About";
 import Gallery from "@/components/sections/Gallery";
 import CallBanner from "@/components/sections/CallBanner";
 import ContactSection from "@/components/sections/ContactSection";
+import BookingSection from "@/components/sections/BookingSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Locations />
         <Experiences />
+        <BookingSection />
         <Wildlife />
         <About />
         <Gallery />

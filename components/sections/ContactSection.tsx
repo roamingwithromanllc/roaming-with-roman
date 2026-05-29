@@ -35,9 +35,7 @@ export default function ContactSection() {
                 Select your experience, choose a date, and you&apos;re set.
               </p>
               <a
-                href="https://fareharbor.com/embeds/book/roamingwithromanllc/items/734583/?full-items=yes&flow=1645007"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#booking"
                 className="btn-primary w-full justify-center text-sm"
               >
                 Book Online Now

@@ -59,9 +59,7 @@ export default function Footer() {
               </li>
               <li className="mt-2">
                 <a
-                  href="https://fareharbor.com/embeds/book/roamingwithromanllc/items/734583/?full-items=yes&flow=1645007"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#booking"
                   className="btn-primary text-sm px-4 py-2"
                 >
                   Book a Tour
@@ -75,7 +73,6 @@ export default function Footer() {
             <h4 className="mb-4" style={labelStyle}>Connect with Roman</h4>
             <div className="flex gap-3 flex-wrap">
               {/* Instagram — brand gradient */}
-              <a href="https://www.instagram.com/roamingwithromanllc?igsh=MWhmd294YXc0MjU1Zw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-link group">
                 <span className="social-icon" style={{ borderColor: "#cc2366" }}>
                   <svg width="48" height="48" viewBox="0 0 24 24">
                     <defs>
@@ -92,7 +89,6 @@ export default function Footer() {
                 </span>
               </a>
               {/* Facebook — brand blue */}
-              <a href="https://www.facebook.com/share/1GaF45ARz8/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="social-link group">
                 <span className="social-icon" style={{ color: "#1877F2", borderColor: "#1877F2" }}>
                   <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.026 4.388 11.024 10.125 11.927v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796v8.437C19.612 23.097 24 18.1 24 12.073z"/></svg>
                 </span>

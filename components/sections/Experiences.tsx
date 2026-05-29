@@ -151,9 +151,7 @@ export default function Experiences() {
                 </ul>
 
                 <a
-                  href="https://fareharbor.com/embeds/book/roamingwithromanllc/items/734583/?full-items=yes&flow=1645007"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#booking"
                   className="btn-primary self-start text-sm"
                 >
                   {exp.cta}
