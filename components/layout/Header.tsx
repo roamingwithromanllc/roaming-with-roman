@@ -73,7 +73,7 @@ export default function Header() {
 
           {/* Book Now CTA */}
           <a
-            href="https://fareharbor.com/embeds/book/roamingwithroman/items/all/?full-items=yes"
+            href="https://fareharbor.com/embeds/book/roamingwithromanllc/items/734583/?full-items=yes&flow=1645007"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary hidden lg:inline-flex text-sm px-5 py-2.5"
@@ -118,7 +118,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="https://fareharbor.com/embeds/book/roamingwithroman/items/all/?full-items=yes"
+              href="https://fareharbor.com/embeds/book/roamingwithromanllc/items/734583/?full-items=yes&flow=1645007"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary self-start mt-2"

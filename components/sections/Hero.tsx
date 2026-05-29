@@ -29,7 +29,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center w-full px-2">
           <a
-            href="https://fareharbor.com/embeds/book/roamingwithroman/items/all/?full-items=yes"
+            href="https://fareharbor.com/embeds/book/roamingwithromanllc/items/734583/?full-items=yes&flow=1645007"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary w-full sm:w-auto text-base sm:text-xl px-8 sm:px-12 py-4 sm:py-5 justify-center"

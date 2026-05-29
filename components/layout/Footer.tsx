@@ -59,7 +59,7 @@ export default function Footer() {
               </li>
               <li className="mt-2">
                 <a
-                  href="https://fareharbor.com/embeds/book/roamingwithroman/items/all/?full-items=yes"
+                  href="https://fareharbor.com/embeds/book/roamingwithromanllc/items/734583/?full-items=yes&flow=1645007"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-sm px-4 py-2"
