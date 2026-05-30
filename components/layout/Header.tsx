@@ -33,16 +33,16 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBg}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-24">
+        <div className="flex items-center justify-between h-24 sm:h-40">
           {/* Logo + Brand */}
           <Link href="#home" className="flex items-center gap-3 group">
-            <div className="relative w-14 h-14 sm:w-[88px] sm:h-[88px] rounded-full overflow-hidden border-2 border-[#2ab5a0]/50 group-hover:border-[#f0b429]/70 transition-colors shadow-lg">
+            <div className="relative w-20 h-20 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-[#2ab5a0]/50 group-hover:border-[#f0b429]/70 transition-colors shadow-lg">
               <Image
                 src="/assets/round-logo.png"
                 alt="Roaming with Roman"
                 fill
                 className="object-cover"
-                sizes="80px"
+                sizes="144px"
                 priority
               />
             </div>

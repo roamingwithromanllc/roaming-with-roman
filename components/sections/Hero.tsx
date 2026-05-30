@@ -6,7 +6,7 @@ export default function Hero() {
     >
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto w-full" style={{ paddingTop: "4.5rem" }}>
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto w-full" style={{ paddingTop: "7rem" }}>
         {/* Main heading */}
         <h1
           className="mb-6"
