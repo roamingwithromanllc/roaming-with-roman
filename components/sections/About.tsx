@@ -27,9 +27,9 @@ export default function About() {
               style={{ border: "1px solid rgba(42,181,160,0.3)", boxShadow: "0 30px 80px rgba(0,0,0,0.6), 0 0 40px rgba(42,181,160,0.08)", background: "rgba(10,46,40,0.3)", padding: "2rem" }}
             >
               <Image
-                src="/assets/logo.png"
+                src="/assets/square-logo.jpg"
                 alt="Roaming with Roman"
-                width={1536}
+                width={1024}
                 height={1024}
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
