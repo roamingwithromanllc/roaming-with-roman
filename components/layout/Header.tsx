@@ -38,7 +38,7 @@ export default function Header() {
           <Link href="#home" className="flex items-center gap-3 group">
             <div className="relative w-12 h-12 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-[#2ab5a0]/50 group-hover:border-[#f0b429]/70 transition-colors shadow-lg">
               <Image
-                src="/assets/logo.png"
+                src="/assets/round-logo.png"
                 alt="Roaming with Roman"
                 fill
                 className="object-cover"
