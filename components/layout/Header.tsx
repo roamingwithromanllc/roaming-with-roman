@@ -41,7 +41,7 @@ export default function Header() {
                 src="/assets/round-logo.png"
                 alt="Roaming with Roman"
                 fill
-                className="object-cover"
+                className="object-cover scale-[1.35]"
                 sizes="144px"
                 priority
               />
