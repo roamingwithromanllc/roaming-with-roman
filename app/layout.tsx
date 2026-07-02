@@ -80,6 +80,23 @@ export default function RootLayout({
           gtag('config', 'AW-18201135422');
         `}
       </Script>
+      <Script id="gtag-conversion" strategy="afterInteractive">
+        {`
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18201135422/KngsCIju6LYcEL6S_eZD',
+              'transaction_id': '',
+              'event_callback': callback
+            });
+            return false;
+          }
+        `}
+      </Script>
     </html>
   );
 }

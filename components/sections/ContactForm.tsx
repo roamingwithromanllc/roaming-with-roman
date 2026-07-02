@@ -52,6 +52,9 @@ export default function ContactForm() {
 
       setStatus("success");
       formRef.current?.reset();
+      if (typeof (window as any).gtag_report_conversion === "function") {
+        (window as any).gtag_report_conversion();
+      }
     } catch {
       setErrorMsg("Network error. Please check your connection and try again.");
       setStatus("error");
