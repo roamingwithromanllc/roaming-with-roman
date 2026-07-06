@@ -1,3 +1,5 @@
+import BookNowLink from "@/components/ui/BookNowLink";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -58,12 +60,12 @@ export default function Footer() {
                 </a>
               </li>
               <li className="mt-2">
-                <a
+                <BookNowLink
                   href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
                   className="btn-primary text-sm px-4 py-2"
                 >
                   Book a Tour
-                </a>
+                </BookNowLink>
               </li>
             </ul>
           </div>

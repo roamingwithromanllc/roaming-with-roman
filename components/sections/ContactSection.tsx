@@ -1,5 +1,6 @@
 import ContactForm from "./ContactForm";
 import { Mail, MapPin } from "@/components/ui/Icons";
+import BookNowLink from "@/components/ui/BookNowLink";
 
 export default function ContactSection() {
   return (
@@ -34,12 +35,12 @@ export default function ContactSection() {
                 Book instantly online through our secure FareHarbor booking system.
                 Select your experience, choose a date, and you&apos;re set.
               </p>
-              <a
+              <BookNowLink
                 href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
                 className="btn-primary w-full justify-center text-sm"
               >
                 Book Online Now
-              </a>
+              </BookNowLink>
             </div>
 
             {/* Contact details */}

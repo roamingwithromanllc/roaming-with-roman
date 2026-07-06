@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Leaf, Shield, Award } from "@/components/ui/Icons";
+import BookNowLink from "@/components/ui/BookNowLink";
 
 export default function About() {
   return (
@@ -92,12 +93,12 @@ export default function About() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <a
+              <BookNowLink
                 href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
                 className="btn-primary"
               >
                 Book with Roman
-              </a>
+              </BookNowLink>
               <a href="#contact" className="btn-outline">
                 Ask a Question
               </a>

@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import type { FormEvent } from "react";
+import BookNowLink from "@/components/ui/BookNowLink";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -85,13 +86,13 @@ export default function ContactForm() {
         <p style={{ color: "var(--color-sand)", fontFamily: "var(--font-body)" }}>
           Thanks for reaching out! Roman will get back to you within 24 hours.
           In the meantime, you can{" "}
-          <a
+          <BookNowLink
             href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
             style={{ color: "var(--color-spring-bright)" }}
             className="hover:underline"
           >
             book directly online
-          </a>.
+          </BookNowLink>.
         </p>
         <button
           onClick={() => setStatus("idle")}

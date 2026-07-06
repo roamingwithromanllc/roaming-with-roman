@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import BookNowLink from "@/components/ui/BookNowLink";
 
 const navLinks = [
   { label: "Home",      href: "#home" },
@@ -72,12 +73,12 @@ export default function Header() {
           </nav>
 
           {/* Book Now CTA */}
-          <a
+          <BookNowLink
             href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
             className="btn-primary hidden lg:inline-flex text-sm px-5 py-2.5"
           >
             Book Now
-          </a>
+          </BookNowLink>
 
           {/* Mobile hamburger */}
           <button
@@ -115,13 +116,13 @@ export default function Header() {
                 {l.label}
               </a>
             ))}
-            <a
+            <BookNowLink
               href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
               className="btn-primary self-start mt-2"
               onClick={() => setOpen(false)}
             >
               Book Now
-            </a>
+            </BookNowLink>
           </div>
         </div>
       </div>

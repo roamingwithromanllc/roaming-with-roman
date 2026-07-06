@@ -1,4 +1,5 @@
 import { Compass, Paddle, Wave, SUP, Snorkel } from "@/components/ui/Icons";
+import BookNowLink from "@/components/ui/BookNowLink";
 import type { ReactNode } from "react";
 
 const experiences: { Icon: (props: { size: number; color: string }) => ReactNode; title: string; tag: string; description: string; highlights: string[]; cta: string; color: string; photo: string }[] = [
@@ -150,12 +151,12 @@ export default function Experiences() {
                   ))}
                 </ul>
 
-                <a
+                <BookNowLink
                   href="https://fareharbor.com/embeds/book/roamingwithromanllc/?full-items=yes" target="_blank" rel="noopener noreferrer"
                   className="btn-primary self-start text-sm"
                 >
                   {exp.cta}
-                </a>
+                </BookNowLink>
               </div>
             </div>
           ))}
