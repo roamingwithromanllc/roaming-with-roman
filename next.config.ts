@@ -22,13 +22,13 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              // unsafe-inline required by Next.js hydration scripts and FareHarbor widget
-              "script-src 'self' 'unsafe-inline' https://fareharbor.com https://storage.googleapis.com",
+              // unsafe-inline required by Next.js hydration scripts, FareHarbor widget, and gtag.js
+              "script-src 'self' 'unsafe-inline' https://fareharbor.com https://storage.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https:",
               "media-src 'self' blob:",
-              "connect-src 'self' https://fareharbor.com",
+              "connect-src 'self' https://fareharbor.com https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://googleads.g.doubleclick.net",
               "frame-src 'self' https://fareharbor.com",
               "object-src 'none'",
               "base-uri 'self'",
